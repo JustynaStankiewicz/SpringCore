@@ -16,10 +16,10 @@ public class DemoController {
     @Autowired
     public DemoController(
             @Qualifier("balletCoach") Coach theCoach,
-            @Qualifier("balletCoach") Coach theAnotherCoach){
-        System.out.println("In constructor: "+getClass().getSimpleName());
-        myCoach=theCoach;
-        anotherCoach=theAnotherCoach;
+            @Qualifier("balletCoach") Coach theAnotherCoach) {
+        System.out.println("In constructor: " + getClass().getSimpleName());
+        myCoach = theCoach;
+        anotherCoach = theAnotherCoach;
     }
 
 
@@ -29,14 +29,14 @@ public class DemoController {
     }*/
 
     @GetMapping("/dailyworkout")
-    public String getDailyWorkout(){
+    public String getDailyWorkout() {
         return myCoach.getDailyFortune();
     }
 
     @GetMapping("/check")
-    public String check(){
+    public String check() {
 
-        return "Comparing beans: "+ (myCoach==anotherCoach);
+        return "Comparing beans: " + (myCoach == anotherCoach);
     }
 
 }

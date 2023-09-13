@@ -13,8 +13,8 @@ public class DemoController {
 
     //constructor for dependency injection
     @Autowired
-    public DemoController(Coach theCoach){
-        myCoach=theCoach;
+    public DemoController(Coach theCoach) {
+        myCoach = theCoach;
     }
 
     /* @Autowired
@@ -23,7 +23,7 @@ public class DemoController {
     }*/
 
     @GetMapping("/dailyworkout")
-    public String getDailyWorkout(){
+    public String getDailyWorkout() {
         return myCoach.getDailyFortune();
     }
 }

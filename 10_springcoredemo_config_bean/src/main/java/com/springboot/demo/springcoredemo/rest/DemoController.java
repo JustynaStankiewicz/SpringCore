@@ -15,13 +15,13 @@ public class DemoController {
 
     //constructor for dependency injection
     @Autowired
-    public DemoController(@Qualifier("swimCoach") Coach theCoach){
-        System.out.println("In constructor: "+getClass().getSimpleName());
-        myCoach=theCoach;
+    public DemoController(@Qualifier("swimCoach") Coach theCoach) {
+        System.out.println("In constructor: " + getClass().getSimpleName());
+        myCoach = theCoach;
     }
 
     @GetMapping("/dailyworkout")
-    public String getDailyWorkout(){
+    public String getDailyWorkout() {
         return myCoach.getDailyFortune();
     }
 

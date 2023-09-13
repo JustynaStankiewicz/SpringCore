@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     private Coach myCoach;
 
-//    constructor for dependency injection
+    //    constructor for dependency injection
     @Autowired
-    public DemoController(Coach theCoach){
-        myCoach=theCoach;
+    public DemoController(Coach theCoach) {
+        myCoach = theCoach;
     }
 
     @GetMapping("/dailyworkout")
-    public String getDailyWorkout(){
-        return myCoach.getDailyFortune();
+    public String getDailyWorkout() {
+        return myCoach.getDailyWorkout();
     }
 }

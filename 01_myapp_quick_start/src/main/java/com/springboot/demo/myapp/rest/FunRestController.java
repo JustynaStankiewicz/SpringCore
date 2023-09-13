@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FunRestController {
     @GetMapping("/hello")
-    public String sayHello(){
+    public String sayHello() {
         return "Hello World!";
     }
 
     @GetMapping("/fortune")
-    public String getDailyFortune(){
+    public String getDailyFortune() {
         return "You will find some happiness today.";
     }
 }

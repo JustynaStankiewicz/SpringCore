@@ -15,20 +15,21 @@ public class DemoController {
 
     //constructor for dependency injection
     @Autowired
-    public DemoController(@Qualifier("balletCoach") Coach theCoach){
-        System.out.println("In constructor: "+getClass().getSimpleName());
-        myCoach=theCoach;
+    public DemoController(@Qualifier("balletCoach") Coach theCoach) {
+        System.out.println("In constructor: " + getClass().getSimpleName());
+        myCoach = theCoach;
     }
 
     //define init method
     @PostConstruct
-    public void  doMyStartupStuff(){
-        System.out.println("In doMyStartupStuff(): "+getClass().getSimpleName());
+    public void doMyStartupStuff() {
+        System.out.println("In doMyStartupStuff(): " + getClass().getSimpleName());
     }
+
     //define destroy method
     @PreDestroy
-    public void  doMyCleanupStuff(){
-        System.out.println("In doMyCleanupStuff(): "+getClass().getSimpleName());
+    public void doMyCleanupStuff() {
+        System.out.println("In doMyCleanupStuff(): " + getClass().getSimpleName());
     }
 
     /* @Autowired
@@ -37,7 +38,7 @@ public class DemoController {
     }*/
 
     @GetMapping("/dailyworkout")
-    public String getDailyWorkout(){
+    public String getDailyWorkout() {
         return myCoach.getDailyFortune();
     }
 

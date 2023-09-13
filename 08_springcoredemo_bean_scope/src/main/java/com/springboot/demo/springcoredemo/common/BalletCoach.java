@@ -6,10 +6,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class BalletCoach implements Coach{
-    public BalletCoach(){
-        System.out.println("In constructor: "+ getClass().getSimpleName() );
+public class BalletCoach implements Coach {
+    public BalletCoach() {
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
+
     @Override
     public String getDailyFortune() {
         return "Go Guuuurl!Spin! Spin! Spin! ";

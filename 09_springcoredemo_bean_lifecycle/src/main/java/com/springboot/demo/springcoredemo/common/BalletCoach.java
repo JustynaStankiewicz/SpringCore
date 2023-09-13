@@ -5,10 +5,11 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BalletCoach implements Coach{
-    public BalletCoach(){
-        System.out.println("In constructor: "+ getClass().getSimpleName() );
+public class BalletCoach implements Coach {
+    public BalletCoach() {
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
+
     @Override
     public String getDailyFortune() {
         return "Go Guuuurl!Spin! Spin! Spin! ";

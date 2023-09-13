@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-public class BalletCoach implements Coach{
+public class BalletCoach implements Coach {
 
     @Override
     public String getDailyFortune() {

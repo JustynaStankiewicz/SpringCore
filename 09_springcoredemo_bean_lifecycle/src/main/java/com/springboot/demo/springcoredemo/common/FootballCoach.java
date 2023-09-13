@@ -3,11 +3,12 @@ package com.springboot.demo.springcoredemo.common;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FootballCoach implements Coach{
+public class FootballCoach implements Coach {
 
-    public FootballCoach(){
-        System.out.println("In constructor: "+ getClass().getSimpleName() );
+    public FootballCoach() {
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
+
     @Override
     public String getDailyFortune() {
         return "Run 7 yards!!!!!";

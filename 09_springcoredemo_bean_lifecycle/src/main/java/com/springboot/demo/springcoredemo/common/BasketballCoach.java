@@ -5,10 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 /*@Primary*/
-public class BasketballCoach implements Coach{
-    public BasketballCoach(){
-        System.out.println("In constructor: "+ getClass().getSimpleName() );
+public class BasketballCoach implements Coach {
+    public BasketballCoach() {
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
+
     @Override
     public String getDailyFortune() {
         return "You are not high enough! JUMP";

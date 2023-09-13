@@ -5,10 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Lazy
-public class TennisCoach implements Coach{
-    public TennisCoach(){
-        System.out.println("In constructor: "+ getClass().getSimpleName() );
+public class TennisCoach implements Coach {
+    public TennisCoach() {
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
+
     @Override
     public String getDailyFortune() {
         return "You must work on your backend!  ";

@@ -1,6 +1,6 @@
 package com.springboot.demo.springcoredemo.common;
 
-public class SwimCoach implements Coach{
+public class SwimCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
